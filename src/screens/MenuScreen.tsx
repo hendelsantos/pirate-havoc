@@ -1,9 +1,12 @@
+import { RecordsPanel } from '../components/RecordsPanel';
+
 interface MenuScreenProps {
   readonly onPlay: () => void;
   readonly onOptions: () => void;
+  readonly compatibility: string;
 }
 
-export function MenuScreen({ onPlay, onOptions }: MenuScreenProps) {
+export function MenuScreen({ onPlay, onOptions, compatibility }: MenuScreenProps) {
   return (
     <main className="menuScreen">
       <div className="menuMist" />
@@ -35,10 +38,7 @@ export function MenuScreen({ onPlay, onOptions }: MenuScreenProps) {
         </article>
       </section>
 
-      <nav className="menuTabs" aria-label="Records">
-        <button type="button" disabled>World ranking <span>Coming in phase 5</span></button>
-        <button type="button" disabled>Match history <span>Coming in phase 5</span></button>
-      </nav>
+      <RecordsPanel compatibility={compatibility} />
       <footer>Jungle Gaming Game Developer Challenge · v0.1.0</footer>
     </main>
   );
