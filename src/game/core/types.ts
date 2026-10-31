@@ -11,6 +11,7 @@ export interface HudSnapshot {
   readonly score: number;
   readonly remainingSeconds: number;
   readonly projectileCount: number;
+  readonly enemyCount: number;
   readonly pauseReason?: 'MANUAL' | 'FOCUS_LOST';
 }
 

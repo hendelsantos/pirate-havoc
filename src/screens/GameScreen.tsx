@@ -17,6 +17,7 @@ const INITIAL_HUD: HudSnapshot = {
   score: 0,
   remainingSeconds: 0,
   projectileCount: 0,
+  enemyCount: 0,
 };
 
 export function GameScreen({ config, onExit, onComplete }: GameScreenProps) {

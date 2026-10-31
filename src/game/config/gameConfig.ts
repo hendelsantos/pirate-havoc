@@ -17,6 +17,27 @@ export interface GameConfig {
     readonly lifetimeSeconds: number;
     readonly radius: number;
     readonly frontCooldownSeconds: number;
+    readonly broadsideCooldownSeconds: number;
+  };
+  readonly enemies: {
+    readonly spawnDistanceFromPlayer: number;
+    readonly chaser: {
+      readonly maxHealth: number;
+      readonly speed: number;
+      readonly rotationSpeed: number;
+      readonly radius: number;
+      readonly impactDamage: number;
+    };
+    readonly shooter: {
+      readonly maxHealth: number;
+      readonly speed: number;
+      readonly rotationSpeed: number;
+      readonly radius: number;
+      readonly attackRange: number;
+      readonly preferredRange: number;
+      readonly fireCooldownSeconds: number;
+      readonly projectileDamage: number;
+    };
   };
 }
 
@@ -51,6 +72,27 @@ const BASE_CONFIG: Omit<GameConfig, 'matchDurationSeconds' | 'enemySpawnInterval
     lifetimeSeconds: 1.8,
     radius: 7,
     frontCooldownSeconds: 0.42,
+    broadsideCooldownSeconds: 1.1,
+  },
+  enemies: {
+    spawnDistanceFromPlayer: 360,
+    chaser: {
+      maxHealth: 50,
+      speed: 118,
+      rotationSpeed: 2.2,
+      radius: 27,
+      impactDamage: 28,
+    },
+    shooter: {
+      maxHealth: 75,
+      speed: 90,
+      rotationSpeed: 1.75,
+      radius: 29,
+      attackRange: 470,
+      preferredRange: 330,
+      fireCooldownSeconds: 1.65,
+      projectileDamage: 12,
+    },
   },
 };
 
@@ -81,6 +123,11 @@ export function createGameConfig(options: GameOptions): Readonly<GameConfig> {
     arena: Object.freeze({ ...BASE_CONFIG.arena }),
     player: Object.freeze({ ...BASE_CONFIG.player }),
     projectile: Object.freeze({ ...BASE_CONFIG.projectile }),
+    enemies: Object.freeze({
+      ...BASE_CONFIG.enemies,
+      chaser: Object.freeze({ ...BASE_CONFIG.enemies.chaser }),
+      shooter: Object.freeze({ ...BASE_CONFIG.enemies.shooter }),
+    }),
     matchDurationSeconds: valid.matchDurationSeconds,
     enemySpawnIntervalSeconds: valid.enemySpawnIntervalSeconds,
   });
