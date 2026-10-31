@@ -7,8 +7,5 @@ export default defineConfig({
     target: 'es2022',
     sourcemap: true,
   },
-  test: {
-    environment: 'jsdom',
-  },
 });
 

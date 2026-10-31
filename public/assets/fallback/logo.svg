@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" role="img" aria-labelledby="title">
+  <title id="title">Pirate Havoc crest</title>
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffe59a"/><stop offset=".45" stop-color="#e9a83a"/><stop offset="1" stop-color="#8b461d"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="10" stdDeviation="8" flood-opacity=".55"/></filter>
+  </defs>
+  <g filter="url(#shadow)">
+    <path d="M360 24 398 89l73-13-7 72 64 34-50 52 26 68-74 10-18 71-62-39-62 39-18-71-74-10 26-68-50-52 64-34-7-72 73 13z" fill="#0a2635" stroke="url(#gold)" stroke-width="9"/>
+    <path d="M350 70c-46 6-81 38-81 78 0 28 17 51 42 65l-15 42 40-23 24 6 24-6 40 23-15-42c25-14 42-37 42-65 0-40-35-72-81-78z" fill="#f0dfbd"/>
+    <circle cx="325" cy="145" r="16" fill="#0a1820"/><circle cx="395" cy="145" r="16" fill="#0a1820"/>
+    <path d="m360 157-17 31h34zM325 201l35 18 35-18" fill="none" stroke="#0a1820" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M245 105 475 270M475 105 245 270" stroke="#f0dfbd" stroke-width="24" stroke-linecap="round"/>
+  </g>
+  <text x="360" y="278" text-anchor="middle" fill="url(#gold)" stroke="#361c12" stroke-width="8" paint-order="stroke" font-size="68" font-weight="900" font-family="Georgia,serif" letter-spacing="6">PIRATE HAVOC</text>
+</svg>
+

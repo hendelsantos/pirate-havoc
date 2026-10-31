@@ -36,8 +36,8 @@ Status values: `Planned`, `In progress`, `Verified`, `Blocked`.
 | React functional UI | `src/app`, screen components | Menu/options/results keyboard navigation | In progress |
 | Strict TypeScript + Vite | root configuration | `npm run typecheck`, `npm run build` | In progress |
 | PixiJS rendering | `src/game/rendering` | Arena, ships, projectiles, effects, health bars | In progress |
-| Fixed-step simulation | `GameEngine` accumulator | Timer/movement stable across frame rates | Planned |
-| Player controls | input system + touch overlay | Move, rotate, front/left/right fire together | Planned |
+| Fixed-step simulation | `GameEngine` accumulator | Timer/movement stable across frame rates | In progress |
+| Player controls | input system + touch overlay | Move, rotate, front/left/right fire together | In progress |
 | Physics and combat | collision + combat systems | All collision pairs, one-hit projectiles, cleanup | Planned |
 | Chaser and Shooter | AI systems | Both spawn and obey islands/rules | Planned |
 | Match lifecycle | explicit state machine | menu/loading/play/pause/game-over/restart | Planned |
