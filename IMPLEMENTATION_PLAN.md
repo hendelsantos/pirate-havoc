@@ -38,16 +38,16 @@ Status values: `Planned`, `In progress`, `Verified`, `Blocked`.
 | PixiJS rendering | `src/game/rendering` | Arena, ships, projectiles, effects, health bars | In progress |
 | Fixed-step simulation | `GameEngine` accumulator | Timer/movement stable across frame rates | In progress |
 | Player controls | input system + touch overlay | Move, rotate, front/left/right fire together | In progress |
-| Physics and combat | collision + combat systems | All collision pairs, one-hit projectiles, cleanup | Planned |
-| Chaser and Shooter | AI systems | Both spawn and obey islands/rules | Planned |
-| Match lifecycle | explicit state machine | menu/loading/play/pause/game-over/restart | Planned |
-| Configuration | typed config + local storage | validated 60–180s / 2–15s options snapshot | Planned |
+| Physics and combat | collision + combat systems | All collision pairs, one-hit projectiles, cleanup | In progress |
+| Chaser and Shooter | AI systems | Both spawn and obey islands/rules | In progress |
+| Match lifecycle | explicit state machine | menu/loading/play/pause/game-over/restart | In progress |
+| Configuration | typed config + local storage | validated 60–180s / 2–15s options snapshot | In progress |
 | Responsive accessible UI | React + CSS | desktop/mobile, focus, labels, semantic HUD | Planned |
 | Official assets | asset catalog | progress, failure, retry, caching, cleanup | Blocked |
-| Ranking/history | typed API + Query/Axios | pagination, states, compatible ranking | Planned |
-| MSW in production | service worker + handlers | deterministic scenario selector/reset | Planned |
-| Reliable submission | pending queue + idempotency | refresh/retry/timeout never duplicates | Planned |
-| Playwright | `tests/e2e` | specified desktop/mobile/visual suite | Planned |
+| Ranking/history | typed API + Query/Axios | pagination, states, compatible ranking | In progress |
+| MSW in production | service worker + handlers | deterministic scenario selector/reset | In progress |
+| Reliable submission | pending queue + idempotency | refresh/retry/timeout never duplicates | In progress |
+| Playwright | `tests/e2e` | specified desktop/mobile/visual suite | In progress |
 | Performance | diagnostics + report | FPS, p95, entities, 3-minute/5-cycle observations | Planned |
 | Deployment | static provider config | public URL, refresh-safe | Planned |
 

@@ -14,6 +14,7 @@ const FALLBACK_ASSETS = {
 
 export class AssetManager {
   private textures: GameTextures | undefined;
+  private failureScenarioConsumed = false;
 
   async load(onProgress: (progress: number, label: string) => void): Promise<GameTextures> {
     if (this.textures) {
@@ -21,7 +22,8 @@ export class AssetManager {
       return this.textures;
     }
 
-    if (new URLSearchParams(window.location.search).get('assetFailure') === '1') {
+    if (new URLSearchParams(window.location.search).get('assetFailure') === '1' && !this.failureScenarioConsumed) {
+      this.failureScenarioConsumed = true;
       throw new Error('Asset failure scenario enabled. Remove ?assetFailure=1 or retry after resetting the scenario.');
     }
 

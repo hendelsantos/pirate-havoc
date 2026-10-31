@@ -58,7 +58,7 @@ Movement and attacks can be held simultaneously. Losing browser focus pauses the
 
 ## Assets
 
-The application currently includes original SVG fallback art under `public/assets/fallback`. These files were authored for this repository and may be used under the repository license.
+The application currently includes original SVG fallback art under `public/assets/fallback`. These files were authored specifically for this repository.
 
 The official challenge assets could not be downloaded in the current restricted execution environment. Copy their original `assets/` contents, including all license information, into `public/assets/official/`. The production asset catalog will prefer official files as they are mapped during the asset-integration milestone.
 
@@ -66,6 +66,16 @@ The official challenge assets could not be downloaded in the current restricted 
 
 - [`IMPLEMENTATION_PLAN.md`](./IMPLEMENTATION_PLAN.md) — requirements, estimates, phases, risks, acceptance checks
 - [`ARCHITECTURE.md`](./ARCHITECTURE.md) — engine boundaries, lifecycle, persistence, API, and testing decisions
+
+## Mock API scenarios
+
+Open **Network scenario tools** below the records panel to select `success`, `empty`, `slow`, deterministic variable latency, connection failure, HTTP 400/500, ranking/history retrieval failures, or timeout after successful registration. The reset action restores fixtures and the success scenario. MSW is started by the application in both development and production builds.
+
+Completed matches are queued locally before submission. The match UUID is the idempotency key, so a retry after a timeout returns the same server-side record. Pending submissions can be retried from the results screen or main menu without blocking a new match.
+
+## Deployment
+
+`vercel.json` contains the static Vite build and refresh-safe SPA rewrite. Import the GitHub repository into Vercel and deploy with the default settings. A public URL will be added only after it is actually deployed and verified.
 
 ## Known limitations
 
